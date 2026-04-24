@@ -31,8 +31,10 @@ done\n\
 \n\
 # Initialize the database mimicking XAMPP exactly\n\
 mysql -e "CREATE DATABASE IF NOT EXISTS restaurant_db;"\n\
-mysql -e "GRANT ALL PRIVILEGES ON *.* TO '\''root'\''@'\''localhost'\'' IDENTIFIED BY '\'''\'' WITH GRANT OPTION;"\n\
-mysql -e "GRANT ALL PRIVILEGES ON *.* TO '\''root'\''@'\''127.0.0.1'\'' IDENTIFIED BY '\'''\'' WITH GRANT OPTION;"\n\
+mysql -e "CREATE USER IF NOT EXISTS '\''root'\''@'\''localhost'\'' IDENTIFIED BY '\'''\'';"\n\
+mysql -e "CREATE USER IF NOT EXISTS '\''root'\''@'\''127.0.0.1'\'' IDENTIFIED BY '\'''\'';"\n\
+mysql -e "GRANT ALL PRIVILEGES ON *.* TO '\''root'\''@'\''localhost'\'' WITH GRANT OPTION;"\n\
+mysql -e "GRANT ALL PRIVILEGES ON *.* TO '\''root'\''@'\''127.0.0.1'\'' WITH GRANT OPTION;"\n\
 mysql -e "FLUSH PRIVILEGES;"\n\
 \n\
 # Import your specific XAMPP schema file\n\
