@@ -359,7 +359,7 @@ class RestaurantApp {
             });
         } catch (e) {
             document.getElementById('floors-grid').innerHTML =
-                '<p class="empty-msg">Could not load floors. Is XAMPP running?</p>';
+                '<p class="empty-msg">Could not load floors. Is the database running?</p>';
         }
     }
 
@@ -577,7 +577,7 @@ class RestaurantApp {
                 this.showNotification('Booking Failed', data.error || 'Could not create reservation.', 'error');
             }
         } catch (e) {
-            this.showNotification('Error', 'Network error. Is XAMPP running?', 'error');
+            this.showNotification('Error', 'Network error. Is the server running?', 'error');
         } finally {
             btn.disabled = false;
             btn.textContent = 'Confirm Reservation';
@@ -908,7 +908,7 @@ class RestaurantApp {
                 this.showNotification('Login Failed', data.error || 'Invalid credentials.', 'error');
             }
         } catch (e) {
-            this.showNotification('Error', 'Network error. Is XAMPP running?', 'error');
+            this.showNotification('Error', 'Network error. Is the server running?', 'error');
         }
     }
 
