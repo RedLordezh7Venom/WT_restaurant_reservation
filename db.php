@@ -4,10 +4,10 @@
  * Place this file in the same directory as api.php
  */
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'restaurant_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');          // XAMPP default: empty password
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_NAME', getenv('DB_NAME') ?: 'restaurant_db');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');          // XAMPP default: empty password
 define('DB_CHARSET', 'utf8mb4');
 
 function getDB(): PDO {

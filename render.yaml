@@ -1,0 +1,40 @@
+services:
+  # 1. The PHP Web Application (Frontend + API)
+  - type: web
+    name: restaurant-app
+    env: docker
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: DB_HOST
+        value: mysql-db
+      - key: DB_NAME
+        value: restaurant_db
+      - key: DB_USER
+        value: admin
+      - key: DB_PASS
+        value: restaurant_secret
+      # If using SMTP, you can set these in Render Dashboard instead of committing them to code:
+      # - key: SMTP_USER
+      #   sync: false
+      # - key: SMTP_PASS
+      #   sync: false
+
+  # 2. The Private MySQL Database (Only accessible by the web app)
+  - type: pserv
+    name: mysql-db
+    env: docker
+    image: mysql:8.0
+    disk:
+      name: mysql-data
+      mountPath: /var/lib/mysql
+      sizeGB: 1
+    envVars:
+      - key: MYSQL_ROOT_PASSWORD
+        value: root_secret
+      - key: MYSQL_DATABASE
+        value: restaurant_db
+      - key: MYSQL_USER
+        value: admin
+      - key: MYSQL_PASSWORD
+        value: restaurant_secret
