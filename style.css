@@ -1,0 +1,1317 @@
+/* ============================================================
+   Restaurant Reservation System — Stylesheet
+   Same aesthetic as original + Floor-plan stage animations
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lucida Grande", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #e8eef2;
+    color: #333;
+    line-height: 1.6;
+}
+
+#container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+#header {
+    background: linear-gradient(to bottom, #d35400 0%, #c0392b 100%);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #a03920;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.header-left h1 {
+    font-size: 28px;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 3px;
+}
+
+.tagline {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#welcome-text {
+    font-size: 14px;
+    background: rgba(255,255,255,0.15);
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.btn-header {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.btn-header:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* ============================================================
+   MAIN LAYOUT
+============================================================ */
+#main-layout {
+    display: flex;
+    flex: 1;
+}
+
+/* ============================================================
+   SIDEBAR
+============================================================ */
+#sidebar {
+    width: 240px;
+    background: linear-gradient(to bottom, #34495e 0%, #2c3e50 100%);
+    color: white;
+    border-right: 2px solid #1a252f;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.sidebar-header {
+    background: rgba(0,0,0,0.2);
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.nav-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.nav-item.active {
+    background: linear-gradient(to right, rgba(231,76,60,0.3) 0%, transparent 100%);
+    border-left-color: #e74c3c;
+}
+
+.nav-icon { font-size: 18px; }
+.nav-text  { font-size: 14px; }
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 60px;
+    width: 240px;
+    padding: 15px;
+}
+
+.info-box {
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.info-title {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #e74c3c;
+}
+
+.info-content {
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* ============================================================
+   CONTENT AREA
+============================================================ */
+#content-area {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background: #f5f5f5;
+}
+
+.page { display: none; }
+.page.active {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.content-header { margin-bottom: 25px; }
+.content-header h2 { font-size: 24px; color: #2c3e50; margin-bottom: 5px; }
+.content-header p  { color: #7f8c8d; font-size: 14px; }
+
+/* ============================================================
+   BOOKING LAYOUT
+============================================================ */
+.booking-layout {
+    display: flex;
+    gap: 25px;
+}
+
+.booking-panel {
+    width: 350px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.panel-section { margin-bottom: 25px; }
+.panel-section h3 {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 6px;
+}
+
+/* ============================================================
+   CALENDAR
+============================================================ */
+#calendar-container {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-nav {
+    background: linear-gradient(to bottom, #e74c3c 0%, #c0392b 100%);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.calendar-nav:hover {
+    background: linear-gradient(to bottom, #e85d4c 0%, #d0493b 100%);
+}
+
+.calendar-month {
+    font-weight: bold;
+    font-size: 15px;
+    color: #2c3e50;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day-header {
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #7f8c8d;
+    padding: 5px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s;
+}
+
+.calendar-day:hover:not(.disabled):not(.other-month) {
+    background: #fef5e7;
+    border-color: #e74c3c;
+    transform: scale(1.05);
+}
+
+.calendar-day.selected {
+    background: linear-gradient(to bottom, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    border-color: #c0392b;
+    box-shadow: 0 2px 6px rgba(231,76,60,0.4);
+}
+
+.calendar-day.disabled { opacity: 0.3; cursor: not-allowed; }
+.calendar-day.other-month { opacity: 0.4; }
+.calendar-day.today { border: 2px solid #3498db; font-weight: bold; }
+
+/* ============================================================
+   TIME SLOTS
+============================================================ */
+#time-slots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.time-slot {
+    padding: 10px;
+    background: linear-gradient(to bottom, #fafafa 0%, #e8e8e8 100%);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.time-slot:hover:not(.disabled) {
+    background: linear-gradient(to bottom, #fff 0%, #f0f0f0 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.time-slot.selected {
+    background: linear-gradient(to bottom, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    border-color: #c0392b;
+}
+
+.time-slot.disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ============================================================
+   FORM CONTROLS
+============================================================ */
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    background: white;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1), 0 0 5px rgba(231,76,60,0.3);
+}
+
+textarea.form-control { resize: vertical; }
+
+/* ============================================================
+   FLOOR PLAN PANEL
+============================================================ */
+.floor-plan-panel {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    min-width: 0;
+}
+
+.floor-plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.floor-plan-header h3 { font-size: 18px; color: #2c3e50; }
+
+.legend { display: flex; gap: 20px; }
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 2px solid #333;
+}
+
+.legend-color.available { background: linear-gradient(to bottom, #2ecc71 0%, #27ae60 100%); }
+.legend-color.selected  { background: linear-gradient(to bottom, #3498db 0%, #2980b9 100%); }
+.legend-color.booked    { background: linear-gradient(to bottom, #e74c3c 0%, #c0392b 100%); }
+
+/* ============================================================
+   BREADCRUMB
+============================================================ */
+.floor-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 15px;
+    padding: 8px 14px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    font-size: 13px;
+}
+
+.bc-btn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    padding: 2px 6px;
+    border-radius: 3px;
+    transition: background 0.2s;
+    font-weight: bold;
+}
+
+.bc-btn:hover { background: rgba(231,76,60,0.1); }
+.bc-sep { color: #aaa; }
+.bc-room { color: #2c3e50; font-weight: bold; padding: 2px 6px; }
+
+/* ============================================================
+   STAGE SYSTEM (Floors → Rooms → Tables)
+============================================================ */
+.floor-stage {
+    display: none;
+    animation: stageIn 0.35s ease-out;
+}
+
+.floor-stage.active-stage {
+    display: block;
+}
+
+@keyframes stageIn {
+    from { opacity: 0; transform: scale(0.96) translateY(8px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.stage-hint {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+/* ============================================================
+   STAGE 1: BUILDING STACK
+   Floors stacked like a real building — widest at bottom,
+   narrowing to rooftop. Click zooms into that floor.
+============================================================ */
+.building-stack {
+    display: flex;
+    flex-direction: column;   /* rooftop first in DOM = top visually */
+    align-items: center;
+    padding: 30px 10px 10px;
+    gap: 0;
+    /* subtle perspective so slabs feel 3-D */
+    perspective: 900px;
+}
+
+/* Single floor slab */
+.building-floor {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 28px 28px;   /* extra bottom for window strip */
+    border-radius: 10px 10px 3px 3px;
+    border: 1.5px solid rgba(0,0,0,0.12);
+    border-bottom: none;
+    /* layered box-shadow creates slab depth */
+    box-shadow:
+        0 -3px 0 rgba(0,0,0,0.06),
+        0  8px 28px rgba(0,0,0,0.13),
+        inset 0 1px 0 rgba(255,255,255,0.65);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.2s;
+    animation: floorRise 0.45s ease-out both;
+    overflow: hidden;
+    margin-bottom: 3px;
+    min-height: 80px;
+}
+
+/* Staggered rise-in for each floor */
+@keyframes floorRise {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 3-D right-side depth edge */
+.building-floor::after {
+    content: '';
+    position: absolute;
+    right: -7px;
+    top: 8px;
+    bottom: 0;
+    width: 7px;
+    background: rgba(0,0,0,0.18);
+    clip-path: polygon(0 0, 100% 10px, 100% 100%, 0 100%);
+    border-radius: 0 3px 3px 0;
+}
+
+/* Hover: lift the slab */
+.building-floor:hover {
+    transform: translateY(-6px);
+    filter: brightness(1.04) saturate(1.1);
+    box-shadow:
+        0 -3px 0 rgba(0,0,0,0.07),
+        0 18px 40px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+    z-index: 10;
+}
+
+/* ZOOM: clicked floor zooms in, siblings fade */
+.building-floor.floor-zooming {
+    animation: buildingZoom 0.4s cubic-bezier(0.4,0,0.2,1) forwards !important;
+    z-index: 50;
+}
+@keyframes buildingZoom {
+    0%   { transform: scale(1)   translateY(0);   opacity: 1; }
+    35%  { transform: scale(1.07) translateY(-6px); }
+    100% { transform: scale(5)   translateY(-12px); opacity: 0; }
+}
+
+.building-floor.floor-fade-out {
+    animation: buildingFade 0.35s ease forwards !important;
+}
+@keyframes buildingFade {
+    to { opacity: 0; transform: scale(0.92) translateY(6px); }
+}
+
+/* ── Floor colour themes ─────────────────────────────────── */
+.building-floor.bfloor-ground {
+    background: linear-gradient(135deg, #fff8f0 0%, #fde0c0 100%);
+    border-color: #f5bfa0;
+}
+.building-floor.bfloor-mid {
+    background: linear-gradient(135deg, #f0f6ff 0%, #cfe0f8 100%);
+    border-color: #a0c4e8;
+}
+.building-floor.bfloor-top {
+    background: linear-gradient(135deg, #f5f0ff 0%, #ddd0f8 100%);
+    border-color: #c0a8e8;
+}
+
+/* ── Parapet posts on the top floor ─────────────────────── */
+.bfloor-parapet {
+    position: absolute;
+    top: -16px;
+    left: 0; right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 24px;
+    pointer-events: none;
+}
+.bfloor-parapet-post {
+    width: 7px;
+    height: 18px;
+    border-radius: 2px 2px 0 0;
+    border: 1.5px solid rgba(0,0,0,0.15);
+    border-bottom: none;
+}
+.bfloor-top .bfloor-parapet-post {
+    background: linear-gradient(to bottom, #e8d8fc, #ddd0f8);
+}
+.bfloor-mid .bfloor-parapet-post {
+    background: linear-gradient(to bottom, #d8ecfc, #cfe0f8);
+}
+.bfloor-ground .bfloor-parapet-post {
+    background: linear-gradient(to bottom, #fdd8b8, #fde0c0);
+}
+
+/* ── Glowing window strip at the bottom of each slab ─────── */
+.bfloor-windows {
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 7px;
+    pointer-events: none;
+}
+.bfloor-window {
+    width: 11px;
+    height: 13px;
+    border-radius: 2px 2px 0 0;
+    background: rgba(255, 220, 100, 0.75);
+    border: 1px solid rgba(180,140,60,0.4);
+    box-shadow: 0 0 6px rgba(255,200,50,0.6), inset 0 0 3px rgba(255,255,200,0.5);
+    animation: windowGlow 2.5s ease-in-out infinite alternate;
+}
+.bfloor-window:nth-child(even) {
+    animation-delay: 1.2s;
+}
+@keyframes windowGlow {
+    from { box-shadow: 0 0 4px rgba(255,200,50,0.4), inset 0 0 2px rgba(255,255,180,0.4); }
+    to   { box-shadow: 0 0 10px rgba(255,210,60,0.85), inset 0 0 5px rgba(255,255,220,0.7); }
+}
+
+/* ── Content inside each slab ───────────────────────────── */
+.bfloor-icon {
+    font-size: 36px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+.bfloor-info { flex: 1; min-width: 0; }
+.bfloor-name {
+    font-size: 17px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 3px;
+}
+.bfloor-desc {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+.bfloor-meta {
+    font-size: 12px;
+    color: #6a7a8a;
+    background: rgba(0,0,0,0.07);
+    padding: 5px 12px;
+    border-radius: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.bfloor-enter {
+    font-size: 20px;
+    color: rgba(0,0,0,0.18);
+    flex-shrink: 0;
+    transition: color 0.2s, transform 0.2s;
+}
+.building-floor:hover .bfloor-enter {
+    color: #e74c3c;
+    transform: translateX(4px);
+}
+
+/* ============================================================
+   STAGE 2: ROOM VIEW
+============================================================ */
+#room-plan-container {
+    overflow: auto;
+    min-height: 350px;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fafbfd;
+}
+
+.room-canvas {
+    position: relative;
+    margin: 0 auto;
+}
+
+.room {
+    position: absolute;
+    border: 2px solid #7f8c8d;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    animation: roomSlideIn 0.3s ease-out both;
+}
+
+@keyframes roomSlideIn {
+    from { opacity: 0; transform: translateY(-10px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.room.room-clickable {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.room.room-clickable:hover {
+    border-color: #e74c3c;
+    box-shadow: 0 6px 20px rgba(231,76,60,0.25);
+    transform: scale(1.02);
+    z-index: 5;
+}
+
+.room.room-zoom-out {
+    animation: roomZoomOut 0.3s ease-in-out forwards;
+}
+
+@keyframes roomZoomOut {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.06); }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+.room-label {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #2c3e50;
+    background: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    white-space: nowrap;
+}
+
+.room-meta {
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    font-size: 11px;
+    color: #95a5a6;
+}
+
+.room-click-hint {
+    position: absolute;
+    bottom: 6px;
+    left: 10px;
+    font-size: 11px;
+    color: #e74c3c;
+    opacity: 0;
+    transition: opacity 0.2s;
+    font-weight: bold;
+}
+
+.room.room-clickable:hover .room-click-hint { opacity: 1; }
+
+/* ============================================================
+   STAGE 3: TABLE VIEW
+============================================================ */
+#table-plan-container {
+    overflow: auto;
+    min-height: 350px;
+    border: 2px solid #34495e;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f8f9fa;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.table-canvas {
+    position: relative;
+    margin: 0 auto;
+}
+
+.room-bg-label {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: bold;
+    color: #7f8c8d;
+    background: rgba(255,255,255,0.8);
+    padding: 4px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+/* ============================================================
+   TABLES (circles & rectangles)
+============================================================ */
+.table {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2), inset 0 1px 2px rgba(255,255,255,0.3);
+    animation: tablePopIn 0.3s ease-out both;
+    overflow: hidden;
+}
+
+@keyframes tablePopIn {
+    from { transform: scale(0.3); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+.table-label {
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.table-cap {
+    font-size: 9px;
+    opacity: 0.85;
+}
+
+/* Available */
+.table.available {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    border: 3px solid #229954;
+    animation: tablePopIn 0.3s ease-out both, pulseGreen 2s 0.4s infinite;
+}
+
+@keyframes pulseGreen {
+    0%, 100% { box-shadow: 0 3px 8px rgba(0,0,0,0.2), 0 0 0 0 rgba(46,204,113,0.6); }
+    50%       { box-shadow: 0 3px 8px rgba(0,0,0,0.2), 0 0 0 9px rgba(46,204,113,0); }
+}
+
+.table.available:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 18px rgba(46,204,113,0.55), inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+/* Selected */
+.table.selected {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    border: 3px solid #1f618d;
+    transform: scale(1.15);
+    z-index: 10;
+    animation: tablePopIn 0.3s ease-out both, pulseBlue 1s infinite;
+}
+
+@keyframes pulseBlue {
+    0%, 100% { box-shadow: 0 5px 15px rgba(52,152,219,0.6), 0 0 0 0 rgba(52,152,219,0.7); }
+    50%       { box-shadow: 0 5px 15px rgba(52,152,219,0.6), 0 0 0 14px rgba(52,152,219,0); }
+}
+
+/* Booked */
+.table.booked {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    border: 3px solid #a93226;
+    cursor: not-allowed;
+    opacity: 0.75;
+    animation: tablePopIn 0.3s ease-out both;
+}
+
+.table.booked:hover { opacity: 0.85; }
+
+/* Shake on invalid click */
+.table-shake {
+    animation: tableShake 0.4s ease !important;
+}
+
+@keyframes tableShake {
+    0%, 100% { transform: translateX(0); }
+    20%       { transform: translateX(-6px) rotate(-2deg); }
+    40%       { transform: translateX(6px)  rotate(2deg); }
+    60%       { transform: translateX(-4px) rotate(-1deg); }
+    80%       { transform: translateX(4px)  rotate(1deg); }
+}
+
+/* Rectangle tables */
+.table.rectangle { border-radius: 10px; }
+
+/* ============================================================
+   SELECTED TABLE INFO
+============================================================ */
+.selected-table-info {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ecf0f1 0%, #d5dbdb 100%);
+    border-radius: 8px;
+    border: 2px solid #3498db;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+.selected-table-info h4 { color: #2c3e50; margin-bottom: 10px; }
+.selected-table-info p  { color: #555; margin-bottom: 15px; }
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+.btn {
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, #ecf0f1 0%, #bdc3c7 100%);
+    border: 1px solid #95a5a6;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #f5f6f7 0%, #c8d0d4 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(to bottom, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    border-color: #a93226;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to bottom, #e85d4c 0%, #d0493b 100%);
+}
+
+.btn-large { width: 100%; padding: 15px; font-size: 16px; }
+.btn-small { padding: 6px 12px; font-size: 12px; }
+
+.btn-danger {
+    background: linear-gradient(to bottom, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    border-color: #a93226;
+}
+
+/* ============================================================
+   STATUS BADGES
+============================================================ */
+.status-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.status-confirmed  { background: #d5f5e3; color: #1e8449; }
+.status-cancelled  { background: #fadbd8; color: #922b21; }
+.status-completed  { background: #d6eaf8; color: #1a5276; }
+.status-waiting    { background: #fdebd0; color: #9c640c; }
+.status-notified   { background: #d2b4de; color: #6c3483; }
+
+/* ============================================================
+   RESERVATION CARDS
+============================================================ */
+#reservations-list, #admin-reservations-list {
+    display: grid;
+    gap: 15px;
+}
+
+.reservation-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #e74c3c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    gap: 15px;
+}
+
+.reservation-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.reservation-info { flex: 1; }
+.reservation-info h4 { color: #2c3e50; margin-bottom: 8px; }
+.reservation-info p  { color: #7f8c8d; font-size: 13px; margin: 3px 0; }
+
+.reservation-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   WAITLIST
+============================================================ */
+.waitlist-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.waitlist-form, .current-waitlist {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.waitlist-form h3, .current-waitlist h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+.waitlist-item {
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.waitlist-item h5 { color: #2c3e50; margin-bottom: 5px; }
+.waitlist-item p  { font-size: 12px; color: #7f8c8d; margin: 2px 0; }
+
+/* ============================================================
+   ADMIN PANEL
+============================================================ */
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid #e74c3c;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover { transform: translateY(-3px); }
+
+.stat-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 6px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, #ecf0f1 0%, #bdc3c7 100%);
+    border: 1px solid #95a5a6;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background: white;
+    border-bottom-color: white;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.admin-tab-content {
+    display: none;
+    background: white;
+    padding: 25px;
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.admin-tab-content.active { display: block; }
+
+/* Admin table management */
+.admin-floor-section { margin-bottom: 25px; }
+.admin-floor-section h4 {
+    color: #2c3e50;
+    font-size: 16px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 6px;
+}
+
+.admin-room-section { margin-bottom: 15px; }
+.admin-room-section strong { display: block; margin-bottom: 8px; color: #555; font-size: 14px; }
+
+.admin-table-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.admin-table-chip {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-table-chip.active   { background: #d5f5e3; color: #1e8449; border: 1px solid #a9dfbf; }
+.admin-table-chip.inactive { background: #fadbd8; color: #922b21; border: 1px solid #f1948a; }
+
+.toggle-btn {
+    background: none;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-size: 11px;
+    color: inherit;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.toggle-btn:hover { opacity: 0.7; }
+
+/* ============================================================
+   FOOTER
+============================================================ */
+#footer {
+    background: linear-gradient(to bottom, #34495e 0%, #2c3e50 100%);
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 12px;
+    border-top: 2px solid #1a252f;
+}
+
+/* ============================================================
+   MODAL
+============================================================ */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    background: linear-gradient(to bottom, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 { font-size: 20px; font-weight: normal; }
+
+.close-btn {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-size: 28px;
+    width: 35px; height: 35px;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 1;
+    transition: all 0.2s;
+}
+
+.close-btn:hover { background: rgba(255,255,255,0.3); transform: rotate(90deg); }
+
+.modal-body    { padding: 25px; }
+.modal-footer  { margin-top: 20px; }
+
+.help-text {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #7f8c8d;
+    text-align: center;
+}
+
+/* Confirmation icon */
+.confirmation-icon {
+    width: 80px; height: 80px;
+    background: linear-gradient(to bottom, #2ecc71 0%, #27ae60 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+    margin: 0 auto 20px;
+    box-shadow: 0 5px 15px rgba(46,204,113,0.4);
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0); }
+    to   { transform: scale(1); }
+}
+
+.confirmation-message {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+#confirmation-details {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#confirmation-details p { margin: 8px 0; color: #2c3e50; }
+
+/* ============================================================
+   NOTIFICATIONS
+============================================================ */
+#notification-area {
+    position: fixed;
+    top: 20px; right: 20px;
+    z-index: 2000;
+    width: 350px;
+}
+
+.notification {
+    background: white;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-left: 5px solid #3498db;
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(400px); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
+}
+
+.notification.success { border-left-color: #2ecc71; }
+.notification.error   { border-left-color: #e74c3c; }
+.notification.warning { border-left-color: #f39c12; }
+
+.notification-title   { font-weight: bold; font-size: 14px; margin-bottom: 5px; }
+.notification-message { font-size: 13px; color: #7f8c8d; }
+
+/* ============================================================
+   MISC
+============================================================ */
+.loading-msg, .empty-msg, .floor-card-loading {
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 1200px) {
+    .admin-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1024px) {
+    .booking-layout { flex-direction: column; }
+    .booking-panel  { width: 100%; }
+    .waitlist-container { grid-template-columns: 1fr; }
+    /* On tablets the building stack still looks fine, just tighten min widths */
+    .building-floor { padding: 14px 18px 26px; }
+}
+
+@media (max-width: 768px) {
+    #sidebar { width: 60px; }
+    .nav-text, .sidebar-header, .sidebar-footer { display: none; }
+    .nav-icon { font-size: 22px; }
+    .nav-item { justify-content: center; padding: 14px; }
+    .admin-stats { grid-template-columns: 1fr 1fr; }
+    /* On mobile, all floors go full-width (stacking is still visible via box-shadow) */
+    .building-floor { width: 100% !important; }
+    .bfloor-meta { display: none; }
+}

@@ -1,0 +1,293 @@
+
+==========================================
+TIMESTAMP : 2026-04-24 03:23:31
+TO        : Prabhat <prabhatkrishnaphoton@gmail.com>
+SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    <div style='font-family:Arial,sans-serif;max-width:600px;margin:0 auto;background:#fff;'>
+      <div style='background:linear-gradient(to right,#d35400,#c0392b);padding:30px;text-align:center;'>
+        <h1 style='color:#fff;margin:0;font-size:24px;'>🍽️ Reservation Confirmed!</h1>
+      </div>
+      <div style='padding:30px;'>
+        <p style='color:#555;'>Dear <strong>Prabhat</strong>,</p>
+        <p style='color:#555;'>Your reservation has been confirmed. Here are the details:</p>
+        <div style='background:#f8f9fa;border-radius:8px;padding:20px;margin:20px 0;border-left:4px solid #e74c3c;'>
+          <table style='width:100%;border-collapse:collapse;'>
+            <tr><td style='padding:8px 0;color:#7f8c8d;width:40%;'>Confirmation #</td><td style='padding:8px 0;font-weight:bold;color:#2c3e50;'>RES-DE3C5FA0</td></tr>
+            <tr><td style='padding:8px 0;color:#7f8c8d;'>Name</td><td style='padding:8px 0;color:#2c3e50;'>Prabhat</td></tr>
+            <tr><td style='padding:8px 0;color:#7f8c8d;'>Date</td><td style='padding:8px 0;color:#2c3e50;'>2026-04-24</td></tr>
+            <tr><td style='padding:8px 0;color:#7f8c8d;'>Time</td><td style='padding:8px 0;color:#2c3e50;'>11:30 AM</td></tr>
+            <tr><td style='padding:8px 0;color:#7f8c8d;'>Location</td><td style='padding:8px 0;color:#2c3e50;'>Rooftop › Sky Terrace</td></tr>
+            <tr><td style='padding:8px 0;color:#7f8c8d;'>Table</td><td style='padding:8px 0;color:#2c3e50;'>ST-5</td></tr>
+            <tr><td style='padding:8px 0;color:#7f8c8d;'>Party Size</td><td style='padding:8px 0;color:#2c3e50;'>6 people</td></tr>
+          </table>
+        </div>
+        <p style='color:#7f8c8d;font-size:14px;'>Thank you for choosing 🍽️ Restaurant Reservations. We look forward to serving you!</p>
+      </div>
+      <div style='background:#2c3e50;padding:15px;text-align:center;'>
+        <p style='color:#aaa;font-size:12px;margin:0;'>© 2025 🍽️ Restaurant Reservations | To cancel, reply to this email.</p>
+      </div>
+    </div>
+==========================================
+
+
+==========================================
+TIMESTAMP : 2026-04-24 03:27:37
+TO        : Jack Smith <js@gmail.com>
+SUBJECT   : 🎉 A Table is Available! – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    <div style='font-family:Arial,sans-serif;max-width:600px;margin:0 auto;'>
+      <div style='background:linear-gradient(to right,#27ae60,#2ecc71);padding:30px;text-align:center;'>
+        <h1 style='color:#fff;margin:0;'>🎉 A Table is Now Available!</h1>
+      </div>
+      <div style='padding:30px;'>
+        <p>Dear <strong>Jack Smith</strong>,</p>
+        <p>Great news! A table matching your preference is now available. Please visit our website to book immediately before it's taken.</p>
+        <p style='color:#7f8c8d;font-size:14px;'>Your waitlist position: Party of 2 | Preferred: 2026-04-25 </p>
+        <div style='text-align:center;margin-top:25px;'>
+          <a href='http://localhost/restaurant/' style='background:#e74c3c;color:#fff;padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:bold;'>Book Now</a>
+        </div>
+      </div>
+    </div>
+==========================================
+
+
+==========================================
+TIMESTAMP : 2026-04-24 03:27:39
+TO        : Jack Smith <js@gmail.com>
+SUBJECT   : 🎉 A Table is Available! – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    <div style='font-family:Arial,sans-serif;max-width:600px;margin:0 auto;'>
+      <div style='background:linear-gradient(to right,#27ae60,#2ecc71);padding:30px;text-align:center;'>
+        <h1 style='color:#fff;margin:0;'>🎉 A Table is Now Available!</h1>
+      </div>
+      <div style='padding:30px;'>
+        <p>Dear <strong>Jack Smith</strong>,</p>
+        <p>Great news! A table matching your preference is now available. Please visit our website to book immediately before it's taken.</p>
+        <p style='color:#7f8c8d;font-size:14px;'>Your waitlist position: Party of 2 | Preferred: 2026-04-25 </p>
+        <div style='text-align:center;margin-top:25px;'>
+          <a href='http://localhost/restaurant/' style='background:#e74c3c;color:#fff;padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:bold;'>Book Now</a>
+        </div>
+      </div>
+    </div>
+==========================================
+
+
+==========================================
+TIMESTAMP : 2026-04-24 03:29:17
+METHOD    : gmail
+TO        : p <prabhatkrishnaphoton@gmail.com>
+SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    
+      
+        🍽️ Reservation Confirmed!
+      
+      
+        Dear p,
+        Your reservation has been confirmed. Here are the details:
+        
+          
+            Confirmation #RES-B69AC517
+            Namep
+            Date2026-04-24
+            Time11:30 AM
+            LocationGround Floor &rsaquo; Main Hall
+            TableMH-8
+            Party Size6 people
+          
+        
+        Thank you for choosing 🍽️ Restaurant Reservations. We look forward to serving you!
+      
+      
+        © 2025 🍽️ Restaurant Reservations | To cancel, reply to this email.
+      
+    
+==========================================
+
+[WARNING] PHPMailer not found at C:\xampp\htdocs\restaurant/PHPMailer/src/
+         Email was NOT sent. See README_EMAIL.txt for setup.
+
+
+==========================================
+TIMESTAMP : 2026-04-24 03:36:46
+METHOD    : gmail
+TO        : p <prabhatkrishnaphoton@gmail.com>
+SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    
+      
+        🍽️ Reservation Confirmed!
+      
+      
+        Dear p,
+        Your reservation has been confirmed. Here are the details:
+        
+          
+            Confirmation #RES-2C623861
+            Namep
+            Date2026-04-28
+            Time6:30 PM
+            LocationRooftop &rsaquo; Sky Terrace
+            TableST-5
+            Party Size6 people
+          
+        
+        Thank you for choosing 🍽️ Restaurant Reservations. We look forward to serving you!
+      
+      
+        © 2025 🍽️ Restaurant Reservations | To cancel, reply to this email.
+      
+    
+==========================================
+
+[WARNING] PHPMailer not found at C:\xampp\htdocs\restaurant/PHPMailer/src/
+         Email was NOT sent. See README_EMAIL.txt for setup.
+
+
+==========================================
+TIMESTAMP : 2026-04-24 03:37:40
+METHOD    : gmail
+TO        : patkr <prabhatkrishnaphoton@gmail.com>
+SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    
+      
+        🍽️ Reservation Confirmed!
+      
+      
+        Dear patkr,
+        Your reservation has been confirmed. Here are the details:
+        
+          
+            Confirmation #RES-D454789C
+            Namepatkr
+            Date2026-04-23
+            Time1:30 PM
+            LocationFirst Floor &rsaquo; Private Room A
+            TablePRA-1
+            Party Size2 people
+          
+        
+        Thank you for choosing 🍽️ Restaurant Reservations. We look forward to serving you!
+      
+      
+        © 2025 🍽️ Restaurant Reservations | To cancel, reply to this email.
+      
+    
+==========================================
+
+[WARNING] PHPMailer not found at C:\xampp\htdocs\restaurant/PHPMailer/src/
+         Email was NOT sent. See README_EMAIL.txt for setup.
+
+
+==========================================
+TIMESTAMP : 2026-04-24 03:39:52
+METHOD    : gmail
+TO        : p <prabhatkrishnaphoton@gmail.com>
+SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    
+      
+        🍽️ Reservation Confirmed!
+      
+      
+        Dear p,
+        Your reservation has been confirmed. Here are the details:
+        
+          
+            Confirmation #RES-3C7FDDE8
+            Namep
+            Date2026-04-23
+            Time1:30 PM
+            LocationGround Floor &rsaquo; Main Hall
+            TableMH-8
+            Party Size2 people
+          
+        
+        Thank you for choosing 🍽️ Restaurant Reservations. We look forward to serving you!
+      
+      
+        © 2025 🍽️ Restaurant Reservations | To cancel, reply to this email.
+      
+    
+==========================================
+
+[2026-04-24 03:39:58] ✅ Email SENT via SMTP to prabhatkrishnaphoton@gmail.com
+
+==========================================
+TIMESTAMP : 2026-04-24 03:42:48
+METHOD    : gmail
+TO        : c <grayvallie@deltajohnsons.com>
+SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    
+      
+        🍽️ Reservation Confirmed!
+      
+      
+        Dear c,
+        Your reservation has been confirmed. Here are the details:
+        
+          
+            Confirmation #RES-F4056789
+            Namec
+            Date2026-04-24
+            Time12:00 PM
+            LocationFirst Floor &rsaquo; Private Room A
+            TablePRA-1
+            Party Size2 people
+          
+        
+        Thank you for choosing 🍽️ Restaurant Reservations. We look forward to serving you!
+      
+      
+        © 2025 🍽️ Restaurant Reservations | To cancel, reply to this email.
+      
+    
+==========================================
+
+[2026-04-24 03:42:54] ✅ Email SENT via SMTP to grayvallie@deltajohnsons.com
+
+==========================================
+TIMESTAMP : 2026-04-24 03:44:49
+METHOD    : gmail
+TO        : c <grayvallie@deltajohnsons.com>
+SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    
+      
+        🍽️ Reservation Confirmed!
+      
+      
+        Dear c,
+        Your reservation has been confirmed. Here are the details:
+        
+          
+            Confirmation #RES-4644723A
+            Namec
+            Date2026-04-27
+            Time11:00 AM
+            LocationGround Floor &rsaquo; Garden Patio
+            TableGP-2
+            Party Size2 people
+          
+        
+        Thank you for choosing 🍽️ Restaurant Reservations. We look forward to serving you!
+      
+      
+        © 2025 🍽️ Restaurant Reservations | To cancel, reply to this email.
+      
+    
+==========================================
+
+[2026-04-24 03:44:54] ✅ Email SENT via SMTP to grayvallie@deltajohnsons.com
