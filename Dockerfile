@@ -23,13 +23,16 @@ RUN echo '#!/bin/bash\n\
 # Start MySQL Service\n\
 service mariadb start\n\
 \n\
-# Wait for MySQL to fully boot up\n\
-sleep 3\n\
+# Dynamically wait for MySQL to actually start (Free tier CPUs can be slow)\n\
+until mysqladmin ping -h localhost --silent; do\n\
+    echo "Waiting for database to boot..."\n\
+    sleep 1\n\
+done\n\
 \n\
-# Initialize the database mimicking XAMPP exactly (root with empty password)\n\
+# Initialize the database mimicking XAMPP exactly\n\
 mysql -e "CREATE DATABASE IF NOT EXISTS restaurant_db;"\n\
-mysql -e "CREATE USER IF NOT EXISTS '\''root'\''@'\''localhost'\'' IDENTIFIED BY '\'''\'';"\n\
-mysql -e "GRANT ALL PRIVILEGES ON restaurant_db.* TO '\''root'\''@'\''localhost'\'';"\n\
+mysql -e "GRANT ALL PRIVILEGES ON *.* TO '\''root'\''@'\''localhost'\'' IDENTIFIED BY '\'''\'' WITH GRANT OPTION;"\n\
+mysql -e "GRANT ALL PRIVILEGES ON *.* TO '\''root'\''@'\''127.0.0.1'\'' IDENTIFIED BY '\'''\'' WITH GRANT OPTION;"\n\
 mysql -e "FLUSH PRIVILEGES;"\n\
 \n\
 # Import your specific XAMPP schema file\n\
