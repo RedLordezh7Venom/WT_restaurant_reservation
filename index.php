@@ -288,7 +288,7 @@
         <div class="modal-body">
             <div class="confirmation-icon">✓</div>
             <div id="confirmation-details"></div>
-            <p class="confirmation-message">A confirmation email has been logged. Check <strong>email_log.txt</strong> on localhost.</p>
+            <p class="confirmation-message">A confirmation email has been sent.<br>Please check your email for confirmation details.</p>
             <div class="modal-footer">
                 <button id="close-confirmation-btn" class="btn btn-primary">Close</button>
             </div>

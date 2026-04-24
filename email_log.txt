@@ -291,3 +291,38 @@ SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
 ==========================================
 
 [2026-04-24 03:44:54] ✅ Email SENT via SMTP to grayvallie@deltajohnsons.com
+
+==========================================
+TIMESTAMP : 2026-04-24 03:50:41
+METHOD    : gmail
+TO        : gando <to.sarthak9872@gmail.com>
+SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    
+      
+        🍽️ Reservation Confirmed!
+      
+      
+        Dear gando,
+        Your reservation has been confirmed. Here are the details:
+        
+          
+            Confirmation #RES-2D49E7A1
+            Namegando
+            Date2026-04-27
+            Time11:00 AM
+            LocationGround Floor &rsaquo; Garden Patio
+            TableGP-1
+            Party Size2 people
+          
+        
+        Thank you for choosing 🍽️ Restaurant Reservations. We look forward to serving you!
+      
+      
+        © 2025 🍽️ Restaurant Reservations | To cancel, reply to this email.
+      
+    
+==========================================
+
+[2026-04-24 03:50:47] ✅ Email SENT via SMTP to to.sarthak9872@gmail.com
