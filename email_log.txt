@@ -326,3 +326,73 @@ SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
 ==========================================
 
 [2026-04-24 03:50:47] ✅ Email SENT via SMTP to to.sarthak9872@gmail.com
+
+==========================================
+TIMESTAMP : 2026-04-24 03:54:12
+METHOD    : gmail
+TO        : d <d>
+SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    
+      
+        🍽️ Reservation Confirmed!
+      
+      
+        Dear d,
+        Your reservation has been confirmed. Here are the details:
+        
+          
+            Confirmation #RES-C6E2045F
+            Named
+            Date2026-04-27
+            Time11:00 AM
+            LocationFirst Floor &rsaquo; Lounge
+            TableLG-5
+            Party Size2 people
+          
+        
+        Thank you for choosing 🍽️ Restaurant Reservations. We look forward to serving you!
+      
+      
+        © 2025 🍽️ Restaurant Reservations | To cancel, reply to this email.
+      
+    
+==========================================
+
+[2026-04-24 03:54:12] ❌ SMTP ERROR: Invalid address:  (to): d
+
+==========================================
+TIMESTAMP : 2026-04-24 03:55:18
+METHOD    : gmail
+TO        : d <d>
+SUBJECT   : ✅ Reservation Confirmed – 🍽️ Restaurant Reservations
+------------------------------------------
+
+    
+      
+        🍽️ Reservation Confirmed!
+      
+      
+        Dear d,
+        Your reservation has been confirmed. Here are the details:
+        
+          
+            Confirmation #RES-DF75AF8D
+            Named
+            Date2026-04-28
+            Time1:00 PM
+            LocationGround Floor &rsaquo; Main Hall
+            TableMH-8
+            Party Size2 people
+          
+        
+        Thank you for choosing 🍽️ Restaurant Reservations. We look forward to serving you!
+      
+      
+        © 2025 🍽️ Restaurant Reservations | To cancel, reply to this email.
+      
+    
+==========================================
+
+[2026-04-24 03:55:18] ❌ SMTP ERROR: Invalid address:  (to): d
