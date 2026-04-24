@@ -4,7 +4,7 @@
 
 # Restaurant Reservation System
 
-**A modern, full-stack dining reservation platform with interactive real-time floor plans and integrated email management.**
+**A simple, web-based dining reservation platform with interactive real-time floor plans and integrated email management.**
 
 This project transforms a traditional static HTML interface into a dynamic, state-driven PHP/MySQL application. Built without complex JavaScript frameworks, it leverages pure vanilla JavaScript (ES6+), robust CSS3 animations, and a secure PDO-driven robust REST API in PHP.
 
